@@ -4,11 +4,11 @@ public abstract class Tarea {
 	protected String tipoTarea;
 	protected String descripcionTarea;
 	protected String estadoTarea;
-	protected String responsableTarea;
+	protected Usuario responsableTarea;
 	protected String complejidadTarea;
 	protected String fechaTarea;
 	public Tarea(String idProyecto, String idTarea, String tipoTarea, String descripcionTarea, String estadoTarea,
-			String responsableTarea, String complejidadTarea, String fechaTarea) {
+			Usuario responsableTarea, String complejidadTarea, String fechaTarea) {
 		super();
 		this.idProyecto = idProyecto;
 		this.idTarea = idTarea;
@@ -49,10 +49,10 @@ public abstract class Tarea {
 	public void setEstadoTarea(String estadoTarea) {
 		this.estadoTarea = estadoTarea;
 	}
-	public String getResponsableTarea() {
+	public Usuario getResponsableTarea() {
 		return responsableTarea;
 	}
-	public void setResponsableTarea(String responsableTarea) {
+	public void setResponsableTarea(Usuario responsableTarea) {
 		this.responsableTarea = responsableTarea;
 	}
 	public String getComplejidadTarea() {
