@@ -12,6 +12,10 @@ public class Proyecto {
 		this.responsableProyecto = responsableProyecto;
 		this.listaTareas = new ArrayList<>();
 	}
+	
+	public void agregarTarea(Tarea t) {
+		listaTareas.add(t);
+	}
 	public String getIdProyecto() {
 		return idProyecto;
 	}
@@ -38,8 +42,8 @@ public class Proyecto {
 	}
 	@Override
 	public String toString() {
-		return "Proyecto [idProyecto=" + idProyecto + ", nombreProyecto=" + nombreProyecto + ", responsableProyecto="
-				+ responsableProyecto + "]";
+		return "Proyecto\n id Proyecto: " + idProyecto + " Nombre Proyecto: " + nombreProyecto + " responsable Proyecto: "
+				+ responsableProyecto + "";
 	}
 	
 	

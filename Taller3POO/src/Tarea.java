@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public abstract class Tarea {
 	protected String idProyecto;
 	protected String idTarea;
@@ -6,9 +8,9 @@ public abstract class Tarea {
 	protected String estadoTarea;
 	protected Usuario responsableTarea;
 	protected String complejidadTarea;
-	protected String fechaTarea;
+	protected LocalDate fechaTarea;
 	public Tarea(String idProyecto, String idTarea, String tipoTarea, String descripcionTarea, String estadoTarea,
-			Usuario responsableTarea, String complejidadTarea, String fechaTarea) {
+			Usuario responsableTarea, String complejidadTarea, LocalDate fechaTarea) {
 		super();
 		this.idProyecto = idProyecto;
 		this.idTarea = idTarea;
@@ -61,10 +63,10 @@ public abstract class Tarea {
 	public void setComplejidadTarea(String complejidadTarea) {
 		this.complejidadTarea = complejidadTarea;
 	}
-	public String getFechaTarea() {
+	public LocalDate getFechaTarea() {
 		return fechaTarea;
 	}
-	public void setFechaTarea(String fechaTarea) {
+	public void setFechaTarea(LocalDate fechaTarea) {
 		this.fechaTarea = fechaTarea;
 	}
 	

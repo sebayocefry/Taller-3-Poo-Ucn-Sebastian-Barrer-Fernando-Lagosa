@@ -1,7 +1,9 @@
+import java.time.LocalDate;
+
 public class Feature extends Tarea{
 
 	public Feature(String idProyecto, String idTarea, String tipoTarea, String descripcionTarea, String estadoTarea,
-			Usuario responsableTarea, String complejidadTarea, String fechaTarea) {
+			Usuario responsableTarea, String complejidadTarea, LocalDate fechaTarea) {
 		super(idProyecto, idTarea, tipoTarea, descripcionTarea, estadoTarea, responsableTarea, complejidadTarea, fechaTarea);
 		// TODO Auto-generated constructor stub
 	}

@@ -6,8 +6,9 @@ public class MaIn {
 
 	public static void main(String[] args)throws FileNotFoundException {
 		// TODO Auto-generated method stub
-		 Sistema sis = new Sistema();
+		 Sistema sis = Sistema.getInstance();
 		 File arch = new File("usuarios.txt");
+		 
 			Scanner lector = new Scanner(arch);
 			while(lector.hasNextLine()) {
 				String line = lector.nextLine();

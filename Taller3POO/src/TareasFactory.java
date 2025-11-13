@@ -1,9 +1,10 @@
 // este factory lo hare con switch para varias un poco y porque como son mas opciones me es mas  comodo
 
+import java.time.LocalDate;
 
 public class TareasFactory {
-	public static Tarea crearTrea(String idProyecto,String idTarea,String tipo, String descripcion, String estado, 
-            Usuario responsable, String complejidad, String fecha) {
+	public static Tarea crearTarea(String idProyecto,String idTarea,String tipo, String descripcion, String estado, 
+            Usuario responsable, String complejidad, LocalDate fecha) {
 		switch (tipo.toLowerCase()) {
 		case "bug":
 			return new Bug(idProyecto, idTarea, tipo, descripcion, estado, responsable, complejidad, fecha);
