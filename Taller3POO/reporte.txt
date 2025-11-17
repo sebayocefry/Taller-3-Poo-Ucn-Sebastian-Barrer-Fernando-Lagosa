@@ -1,0 +1,70 @@
+===== Proyecto PR001 =====
+Nombre: Plataforma de E-commerce
+Responsable: admin1
+
+--- Tareas ---
+ID: T001
+Tipo: Bug
+Estado: Pendiente
+Responsable: colab1
+Fecha: 2025-08-01
+Complejidad: Alta
+
+ID: T002
+Tipo: Feature
+Estado: Pendiente
+Responsable: colab2
+Fecha: 2025-08-01
+Complejidad: Media
+
+ID: T003
+Tipo: Documentacion
+Estado: En progreso
+Responsable: colab1
+Fecha: 2025-08-02
+Complejidad: Baja
+
+------------------------
+
+===== Proyecto PR002 =====
+Nombre: Sistema de Inventario
+Responsable: admin2
+
+--- Tareas ---
+ID: T004
+Tipo: Feature
+Estado: Pendiente
+Responsable: colab2
+Fecha: 2025-08-02
+Complejidad: Alta
+
+ID: T005
+Tipo: Bug
+Estado: Pendiente
+Responsable: colab1
+Fecha: 2025-08-03
+Complejidad: Alta
+
+------------------------
+
+===== Proyecto PR003 =====
+Nombre: Aplicación Móvil de Reservas
+Responsable: admin3
+
+--- Tareas ---
+ID: T006
+Tipo: Feature
+Estado: Pendiente
+Responsable: colab1
+Fecha: 2025-08-04
+Complejidad: Media
+
+ID: T007
+Tipo: Documentacion
+Estado: Pendiente
+Responsable: colab2
+Fecha: 2025-08-03
+Complejidad: Baja
+
+------------------------
+
