@@ -52,7 +52,9 @@ public class Sistema implements ISistema {
 	@Override
 	public void cargarProyectos(String[] partes) {
 		// TODO Auto-generated method stub
-		listaProyectos.add(new Proyecto(partes[0],partes[1], partes[2]));
+		String user = partes[2];
+		Usuario respondable = buscarUsuario(user);
+		listaProyectos.add(new Proyecto(partes[0],partes[1], respondable));
 		
 	}
 
@@ -105,8 +107,8 @@ public class Sistema implements ISistema {
 	@Override
 	public void agregarProyecto(String idProyecto, String nombreProyecto, String responsable) {
 		// TODO Auto-generated method stub
-		Proyecto proyectoNuevo = new Proyecto(idProyecto, nombreProyecto, responsable);
 		Usuario usuario = buscarUsuario(responsable);
+		Proyecto proyectoNuevo = new Proyecto(idProyecto, nombreProyecto,usuario);
 		if(proyectoNuevo!=null && usuario!=null) {
 			listaProyectos.add(proyectoNuevo);
 			return;

@@ -1,5 +1,9 @@
 import java.time.LocalDate;
-
+/**
+ * clase tarea
+ * nota: tiene atributos de tipo objeto para facilitar comparacion de datos y por gusto
+ * 
+ */
 public abstract class Tarea {
 	protected String idProyecto;
 	protected String idTarea;
@@ -76,9 +80,9 @@ public abstract class Tarea {
 	
 	@Override
 	public String toString() {
-		return "Tarea [idProyecto=" + idProyecto + ", idTarea=" + idTarea + ", tipoTarea=" + tipoTarea
-				+ ", descripcionTarea=" + descripcionTarea + ", estadoTarea=" + estadoTarea + ", responsableTarea="
-				+ responsableTarea + ", complejidadTarea=" + complejidadTarea + ", fechaTarea=" + fechaTarea + "]";
+		return "Tarea\n id del Proyecto: " + idProyecto + "| id Tarea: " + idTarea + "| tipo Tarea: " + tipoTarea
+				+ "| descripcion Tarea:\n" + descripcionTarea + "\n Estado Tarea: " + estadoTarea + "| responsable Tarea: "
+				+ responsableTarea + "\n complejidad de la Tarea: " + complejidadTarea + "| fecha de la Tarea: " + fechaTarea + " ";
 	}
 	
 }

@@ -30,7 +30,7 @@ public abstract class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario\nnombre Usuario: " + nombreUsuario + " | password: " + password + " | rolUsuario:" + rolUsuario
-				+ "]";
+				+ " ";
 	}
 	
 }

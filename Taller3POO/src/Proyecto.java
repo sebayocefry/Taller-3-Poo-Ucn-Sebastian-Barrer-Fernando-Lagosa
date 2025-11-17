@@ -1,16 +1,19 @@
 import java.util.ArrayList;
-
+/**
+ * nota: Declaramos el atributo estrategia en esta clase para convertirla en el contexto
+ * ya que queremos aplicar estrategoias por proyecto y no a todos
+ * 
+ * nota: Cada proyecto tiene su lista de tareas
+ */
 public class Proyecto {
 	private String idProyecto;
 	private String nombreProyecto;
-	private String responsableProyecto;
+	private Usuario responsableProyecto;
 	private ArrayList<Tarea> listaTareas;
 	
-	// atributo para hacer de contexto la clase proyecto y no la sistema, 
-	//debido que queremos aplicar por proyecto y no todos los proyectos
 	private PrioridadStrategy miEstrategia;
 	
-	public Proyecto(String idProyecto, String nombreProyecto, String responsableProyecto) {
+	public Proyecto(String idProyecto, String nombreProyecto, Usuario responsableProyecto) {
 		super();
 		this.idProyecto = idProyecto;
 		this.nombreProyecto = nombreProyecto;
@@ -47,10 +50,10 @@ public class Proyecto {
 	public void setNombreProyecto(String nombreProyecto) {
 		this.nombreProyecto = nombreProyecto;
 	}
-	public String getResponsableProyecto() {
+	public Usuario getResponsableProyecto() {
 		return responsableProyecto;
 	}
-	public void setResponsableProyecto(String responsableProyecto) {
+	public void setResponsableProyecto(Usuario responsableProyecto) {
 		this.responsableProyecto = responsableProyecto;
 	}
 	public ArrayList<Tarea> getListaTareas() {

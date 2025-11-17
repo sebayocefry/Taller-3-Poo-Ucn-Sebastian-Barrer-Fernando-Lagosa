@@ -1,6 +1,7 @@
 ===== Proyecto PR001 =====
 Nombre: Plataforma de E-commerce
-Responsable: admin1
+Responsable: Usuario
+nombre Usuario: admin1 | password: admin123 | rolUsuario:Administrador 
 
 --- Tareas ---
 ID: T001
@@ -28,7 +29,7 @@ Complejidad: Baja
 
 ===== Proyecto PR002 =====
 Nombre: Sistema de Inventario
-Responsable: admin2
+Responsable: null
 
 --- Tareas ---
 ID: T004
@@ -49,7 +50,7 @@ Complejidad: Alta
 
 ===== Proyecto PR003 =====
 Nombre: Aplicación Móvil de Reservas
-Responsable: admin3
+Responsable: null
 
 --- Tareas ---
 ID: T006
@@ -66,5 +67,21 @@ Responsable: colab2
 Fecha: 2025-08-03
 Complejidad: Baja
 
+------------------------
+
+===== Proyecto PR004 =====
+Nombre: Prueba 
+Responsable: Usuario
+nombre Usuario: colab1 | password: 1234 | rolUsuario:Colaborador 
+
+--- Tareas ---
+------------------------
+
+===== Proyecto PR005 =====
+Nombre: prueba 2
+Responsable: Usuario
+nombre Usuario: colab1 | password: 1234 | rolUsuario:Colaborador 
+
+--- Tareas ---
 ------------------------
 
