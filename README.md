@@ -30,3 +30,30 @@ El núcleo de este proyecto es la implementación de patrones de enfermedad para
 Principio Fundamental: Programación Orientada a Interfaces
 Sigo un enferma estricta, la capa de presentación (MaIn) no interactúa directamente con la clase Sistema, sino con la interfaz ISistema. Esto desacopla la lógica de negocio de la interfaz de usuario, permiso que la implementación del sistema puede ser reemplazada sin afectar al cliente (el MaIn).
 
+🏛️ Patrón Singleton
+Implementación: La clase Sistema implementa el patrón Singleton. El constructor es privado y se accede a la única instancia global a través del método estático Sistema.getInstance().
+
+Justificación: El sistema necesita un Punto Único de Verdad (Single Source of Truth). Solo debe existir una instancia que gestione la lista de usuarios, la lista de proyectos y el estado del usuario logueado (uLogueado). Esto previene la desincronización de datos que ocurriría si múltiples instancias del sistema coexistieran.
+
+🏭 Patrón Factory Method
+Implementación: Se utilizan dos fábricas: UsuarioFactory y TareasFactory.
+
+Justificación: Este patrón encapsula la lógica de creación de objetos complejos.
+
+Cuando el Sistema carga usuarios desde un .txt, no debe saber cómo construir un Admi o un Colaborador. Simplemente le pide a UsuarioFactory.crearUsuario(...) que lo haga.
+
+De igual manera, TareasFactory abstrae la lógica de instanciar un Bug, Feature o Documentacion.
+
+Beneficio: Si en el futuro se añade un nuevo rol (ej. Invitado) o un nuevo tipo de tarea (ej. Mejora), solo se modifica la fábrica correspondiente. Las clases Sistema o MaIn no sufren ningún cambio, adhiriéndose al Principio de Abierto/Cerrado.
+
+🎯 Patrón Strategy
+Implementación: La interfaz PrioridadStrategy define el contrato ordenarTareas(). Las clases EstrategiaFechas, OrdenarComplejidad y OrdenarImpacto proveen implementaciones concretas. La clase Proyecto actúa como el Contexto, manteniendo una referencia a una estrategia (miEstrategia).
+
+Justificación: Permite definir una familia de algoritmos y hacerlos intercambiables. La priorización de tareas es un comportamiento que puede variar. El administrador puede decidir en tiempo de ejecución si las tareas de un proyecto deben ordenarse por fecha, impacto o complejidad. El Proyecto delega la responsabilidad del "cómo" ordenar a la estrategia que tenga asignada, promoviendo la Inversión de Dependencia.
+
+🕵️ Patrón Visitor
+Implementación: La interfaz Visitor define los métodos visitar() para cada tipo de tarea concreta (Bug, Feature, Documentacion). La clase TareasVisitor implementa estas operaciones. La jerarquía de Tarea (los Elementos) implementa el método aceptar(Visitor).
+
+Justificación: Este patrón permite agregar nuevas operaciones a una jerarquía de clases sin modificar esas clases. En este proyecto, TareasVisitor añade la capacidad de imprimir un análisis de impacto ("Afecta criticidad", "Impacta en estimación", etc.).
+
+Beneficio: Si mañana necesitamos una operación completamente nueva (ej. "CalcularCosteTarea"), podemos crear un CosteVisitor sin tener que añadir el método calcularCoste() a la clase Tarea y todas sus hijas. Esto mantiene las clases de tareas limpias, estables y centradas en su única responsabilidad.
